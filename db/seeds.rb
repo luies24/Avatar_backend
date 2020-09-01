@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'rest-client'
 
-rm = RestClient.get 'https://last-airbender-api.herokuapp.com/api/v1/characters'
+rm = RestClient.get 'https://last-airbender-api.herokuapp.com/api/v1/characters?perPage=${5}?page=${30}'
 
 rm_array = JSON.parse(rm)
 
