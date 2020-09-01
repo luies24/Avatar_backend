@@ -16,4 +16,4 @@ rm_array.each do |character|
         name: character["name"],
         nation: character["affiliation"]
     )
-end
+end 
