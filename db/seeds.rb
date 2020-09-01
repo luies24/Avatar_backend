@@ -8,12 +8,13 @@
 require 'rest-client'
 
 rm = RestClient.get 'https://last-airbender-api.herokuapp.com/api/v1/characters?perPage=${5}?page=${30}'
-
+# byebug
 rm_array = JSON.parse(rm)
 
 rm_array.each do |character|
     Character.create(
         name: character["name"],
-        nation: character["affiliation"]
+        nation: character["affiliation"],
+        url: character["photoUrl"]
     )
 end 
