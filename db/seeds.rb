@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'rest-client'
+
+rm = RestClient.get 'https://last-airbender-api.herokuapp.com/api/v1/characters'
+
+rm_array = JSON.parse(rm)
+
+rm_array.each do |character|
+    Character.create(
+        name: character["name"],
+        nation: character["affiliation"]
+    )
+end
