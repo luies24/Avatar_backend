@@ -4,6 +4,7 @@ class CreateCharacters < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :nation
       t.text :url
+      t.string :api_id
       t.timestamps
     end
   end
