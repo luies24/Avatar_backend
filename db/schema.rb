@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 2020_09_01_161319) do
   create_table "characters", force: :cascade do |t|
     t.string "name"
     t.string "nation"
+    t.text "url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

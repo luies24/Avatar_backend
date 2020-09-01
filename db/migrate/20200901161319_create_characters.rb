@@ -3,7 +3,7 @@ class CreateCharacters < ActiveRecord::Migration[6.0]
     create_table :characters do |t|
       t.string :name
       t.string :nation
-
+      t.text :url
       t.timestamps
     end
   end
