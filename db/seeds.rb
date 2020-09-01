@@ -15,6 +15,7 @@ rm_array.each do |character|
     Character.create(
         name: character["name"],
         nation: character["affiliation"],
-        url: character["photoUrl"]
+        url: character["photoUrl"],
+        api_id: character["_id"]
     )
 end 

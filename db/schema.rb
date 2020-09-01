@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2020_09_01_161319) do
     t.string "name"
     t.string "nation"
     t.text "url"
+    t.string "api_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
